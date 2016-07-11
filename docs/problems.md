@@ -1,4 +1,4 @@
-###RMQ运维过程中遇到的一些问题，以及解决方法
+###RabbitMQ运维过程中遇到的一些问题，以及解决方法
 
 **`RabbitMQ Dashboard`或者`REST API`获取不到相关的统计信息**
 ````bash
