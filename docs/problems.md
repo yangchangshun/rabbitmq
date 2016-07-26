@@ -11,6 +11,7 @@ $sudo rabbitmqctl eval 'exit(erlang:whereis(rabbit_mgmt_db), please_terminate).'
 
 --------------------------------
 
+
 **确认集群内所有的从节点(Mirror Mode)都拥有相同的`queue` or `messages` 内容**
 ````bash
 $sudo rabbitmqctl list_queues -p $vhost synchronised_slave_pids
@@ -19,11 +20,8 @@ $sudo rabbitmqctl list_queues -p $vhost synchronised_slave_pids
 
 --------------------------------
 
-
-
 **修改`Statistics interval`: 状态统计时间间隔**
 > By default the server will emit statistics events every 5000ms. The message rate values shown in the management plugin are calculated over this period. You may therefore want to increase this value in order to sample rates over a longer period, or to reduce the statistics load on a server with a very large number of queues or channels.
-
 In order to do so, set the value of the collect_statistics_interval variable for the rabbit application to the desired interval in milliseconds and restart RabbitMQ.
 
 编辑rabbitmq配置文件:
@@ -56,3 +54,5 @@ In order to do so, set the value of the collect_statistics_interval variable for
 $sudo rabbitmqctl eval 'application:set_env(rabbit, collect_statistics_interval, 60000).'
 $sudo rabbitmqctl eval 'application:set_env(rabbitmq_management, stats_event_max_backlog, 2000).'
 ````
+
+- 参考链接: [Management Plugin](https://www.rabbitmq.com/management.html)
