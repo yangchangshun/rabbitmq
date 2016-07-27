@@ -5,6 +5,8 @@
 $sudo rabbitmqctl eval 'application:stop(rabbitmq_management), application:start(rabbitmq_management).'
 or
 $sudo rabbitmqctl eval 'exit(erlang:whereis(rabbit_mgmt_db), please_terminate).'
+or 
+$sudo rabbitmqctl eval 'exit(erlang:whereis(rabbit_mgmt_db), please_crash).'
 ````
 **意为重启状态统计数据库。**
 - 参考链接：[@stackoverflow](http://stackoverflow.com/questions/7711528/rabbitmq-statistics-database-could-not-be-contacted-message-rates-and-queue-l)
