@@ -8,7 +8,7 @@ RabbitMQ 官方提供的MQ的性能测试工具。 包含在`rabbitmq-client-tes
  1. java编译器(>1.5)
  2. Ant(Java编译的一个工具)
  ````bash
- $yum -y instal ant-noarch
+ $yum -y instal ant.noarch
  ````
 - 编译打包
 ````bash
